@@ -21,24 +21,22 @@ correct settings for the subdomain.
 2. Create an application factory (http://flask.pocoo.org/docs/0.10/patterns/appfactories/)
    that takes a keyword argument, subdomain, and use it to configure your app.
 
-    def create_app(subdomain=None):
-        app = Flask(__name__)
+        def create_app(subdomain=None):
+            app = Flask(__name__)
 
-        # Set default configuration
-        # ...
+            # Set default configuration
+            # ...
 
-        # Override configuration based on the subdomain
-        if subdomain == 'dev':
-            app.config['API_HOST'] = 'dev-host'
-        elif subdomain == 'qa':
-            app.config['API_HOST'] = 'qa-host'
+            # Override configuration based on the subdomain
+            if subdomain == 'dev':
+                app.config['API_HOST'] = 'dev-host'
+            elif subdomain == 'qa':
+                app.config['API_HOST'] = 'qa-host'
 
-        return app
+            return app
 
 3. Run the Subdomain Devserver
 
-
-    if __name__ == '__main__':
         import subdomaindevserver
         subdomaindevserver.run(create_app, host='0.0.0.0', port=5000)
 
