@@ -10,6 +10,9 @@ still use the settings from the previous subdomain. This first request
 triggers the devserver to reload and subsequest requests will use the
 correct settings for the subdomain.
 
+This code is modified from the Subdomain Dispatcher code on pocoo.org:
+http://flask.pocoo.org/docs/0.10/patterns/appdispatch/#dispatch-by-subdomain
+
 
 ### Usage
 

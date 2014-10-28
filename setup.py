@@ -1,16 +1,16 @@
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
     name='Flask-SubdomainDevserver',
-    version='0.1.0',
+    version='0.1.1',
     url='http://github.com/saltycrane/flask-subdomaindevserver/',
     license='BSD',
     author='Eliot',
     author_email='saltycrane@gmail.com',
     description='Flask subdomain devserver',
-    packages=find_packages(),
+    py_modules=['subdomaindevserver'],
     install_requires=[
         "Werkzeug>=0.9.6",
     ],
