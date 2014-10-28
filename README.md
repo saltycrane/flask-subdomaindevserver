@@ -1,4 +1,4 @@
-### Flask Subdomain Devserver
+## Flask Subdomain Devserver
 
 This module provides a Flask local development server that allows you to
 set configuration based on the subdomain of the incoming request.
@@ -35,7 +35,8 @@ correct settings for the subdomain.
 
         return app
 
-3. Run the Subdomain Devserver:
+3. Run the Subdomain Devserver
+
 
     if __name__ == '__main__':
         import subdomaindevserver
